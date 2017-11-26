@@ -1,4 +1,4 @@
-baseurl             = "https://alexanderjunge.netlify.com/"
+baseurl             = "https://www.alexanderjunge.net/"
 builddrafts         = false
 canonifyurls        = true
 contentdir          = "content"
