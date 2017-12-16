@@ -17,7 +17,7 @@ Below I will briefly outline how we are using conda in a collaborative project:
 
 ## Basic conda usage when working on a collaborative project
 
-{% highlight shell %}
+```bash
 # add R and bioconda channels
 # these channels provide packages not available in base conda
 conda config --add channels r
@@ -26,22 +26,22 @@ conda config --add channels bioconda
 # create virtual environment named ourenv containing Python 3.5, Bioconductor, IPython
 # and the Python ML-library scikit-learn
 conda create --name ourenv python=3.5 bioconductor-biobase=2.30.0 jupyer scikit-learn
-{% endhighlight shell %}
+```
 
 Note that the above command will automatically install all dependencies of software to be installed.
 For instance, base R will automatically be installed since Bioconductor depends on it.
 
 The current state of the virtual environment with all programs installed in it can then be exported by executing:
 
-{% highlight shell %}
+```bash
 conda env export > environment.yml
-{% endhighlight shell %}
+```
 
 Then simply add the file `environment.yml` to the source code repository used in the collaborative project.
 `environment.yml` not only lists the dependencies of the project but also the *exact version* for each dependency.
 The file looks like this:
 
-{% highlight shell %}
+```bash
 name: ourenv
 dependencies:
 - bioconductor-biobase=2.30.0=0
@@ -55,12 +55,12 @@ dependencies:
 - jupyter_console=4.1.1=py27_0
 - jupyter_core=4.1.0=py27_0
 - [...]
-{% endhighlight shell %}
+```
 
 A new user starting to work in the projects can then obtain a virtual environment where all binaries are identical
 to those used by other team members by executing the following steps (after cloning the source code repository):
 
-{% highlight shell %}
+```bash
 # add R and bioconda channels
 conda config --add channels r
 conda config --add channels bioconda
@@ -72,7 +72,7 @@ conda env create -f environment.yml
 source activate ourenv
 
 # good to go
-{% endhighlight shell %}
+```
 
 By allowing all project members to work with the same versions of all
 project dependencies, (bio)conda provides an essential step towards ensuring reproducibility of any bioinformatics
