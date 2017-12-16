@@ -23,11 +23,11 @@ in the project's README which yields a nice explanation of the output of a
 hypothesis test for testing the null that the proportion of successes in a trial
 is 0.5:
 
-{% highlight r %}
+```R
 library(explainr)
 ptest <- prop.test(x = 500, n = 1008)
 explain(ptest)
-{% endhighlight %}
+```
 
 Which yields the following output:
 
@@ -40,10 +40,10 @@ Which yields the following output:
 Applying explainr's `explain()` function to the output of a t-test works
 as follows:
 
-{% highlight r %}
+```R
 t.res <-  t.test(rnorm(10), rnorm(10))
 explain(t.res)
-{% endhighlight %}
+```
 
 However, the output is only a minimal explanation:
 
@@ -52,9 +52,9 @@ However, the output is only a minimal explanation:
 While the default print of the t-test result provides additional information -
 of course not written in plain English.
 
-{% highlight r %}
+```R
 t.res
-{% endhighlight %}
+```
 
 > Welch Two Sample t-test
 >
