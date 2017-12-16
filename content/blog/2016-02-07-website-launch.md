@@ -18,7 +18,7 @@ Alex
 
 
 <video width="100%" controls>
-   <source src="{{BASE_PATH}}/assets/posts/2016-02-07/2016-02-07-new-post.ogv" type="video/ogg">
+   <source src="{/posts/2016-02-07/2016-02-07-new-post.ogv" type="video/ogg">
 </video>
 
-[Download as .ogv; 72sec; 2.7MB]({{BASE_PATH}}/assets/posts/2016-02-07/2016-02-07-new-post.ogv)
+[Download as .ogv; 72sec; 2.7MB](/posts/2016-02-07/2016-02-07-new-post.ogv)
