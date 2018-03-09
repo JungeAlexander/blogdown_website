@@ -36,12 +36,10 @@ Full curriculum vitae as `.pdf` is available upon request.
 - *01/2015--12/2016*: Vice-Chair and Outreach Chair of the [International Society for Computational Biology (ISCB) Student Council](http://iscbsc.org/)
 - *01/2015--03/2016*: Co-founder and Secretary of [CBioVikings &mdash; ISCB Regional Student Group Denmark](http://cbiovikings.org/)
 
-I am still an active member of the ISCB Student Council and board member of CBioVikings.
-
 ## About this site
 
 This website is a personal homepage. Contents contributed by Alexander Junge are licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
-The site is built with <a target="_blank" rel="noopener" href="//gohugo.io">Hugo</a>—a static site generator made with Go and <a target="_blank" rel="noopener" href="//github.com/rstudio/blogdown">blogdown</a>. The website [source code](//github.com/JungeAlexander/blogdown-website) is available on GitHub and deployed via <a target="_blank" rel="noopener" href="//netlify.com/">Netlify</a>. It uses the <a target="_blank" rel="noopener" href="//github.com/nishanths/cocoa-hugo-theme">cocoa</a> theme. The posts are written in Markdown.
+The site is built with <a target="_blank" rel="noopener" href="//gohugo.io">Hugo</a>—a static site generator made with Go and <a target="_blank" rel="noopener" href="//github.com/rstudio/blogdown">blogdown</a>. The website [source code](//github.com/JungeAlexander/blogdown_website) is available on GitHub and deployed via <a target="_blank" rel="noopener" href="//netlify.com/">Netlify</a>. It uses the <a target="_blank" rel="noopener" href="//github.com/nishanths/cocoa-hugo-theme">cocoa</a> theme. The posts are written in Markdown.
 
 If you find errors, please let me know by following one of the links in the footer of this website.
