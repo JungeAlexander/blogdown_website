@@ -59,7 +59,7 @@ single, easily accessible user interface:
 This project is a collaboration between four research institutes in Denmark
 and one in Switzerland.
 
-Relevant publication: 
+Relevant publication:
 [https://doi.org/10.1093/database/baw167](https://doi.org/10.1093/database/baw167)
 
 ## Clustering of RNA secondary structures
@@ -82,9 +82,9 @@ This project is a collaboration with the
 of Freiburg, Germany. The project website is available
 [here](http://www.bioinf.uni-freiburg.de/Software/RNAscClust/).
 Furthermore, a short video (~1 min.) where I talk about our project is available
-([link to blog post](/blog/2016/07/17/video)). 
+([link to blog post](/blog/2016/07/17/video)).
 
-Relevant publication: 
+Relevant publication:
 [https://doi.org/10.1093/bioinformatics/btx114](https://doi.org/10.1093/bioinformatics/btx114)
 
 ## Competitive endogenous RNAs in leukemia
@@ -105,7 +105,7 @@ the Danish State Hospital.
 This close collaboration between experimental and computational biology makes
 this project especially interesting to me.
 
-Relevant publication: 
+Relevant publication:
 [https://doi.org/10.1016/j.gene.2017.03.015](https://doi.org/10.1016/j.gene.2017.03.015)
 
 ## Active transitivity clustering
@@ -178,8 +178,8 @@ and
 
 ## Quantified self
 
-Since early 2016, I am tracking my activity (step count, heart rate, sleep
-duration, and more).
+In 2016, I experimented with am tracking my activity (step count, heart rate, sleep
+duration, and more) using a Fitbit device.
 I wrote two blog posts,
 [1](/blog/2016/03/19/fitbit-data-01)
 and
@@ -193,4 +193,3 @@ count over time.
 Inspired by [Bastian Greshake's work](http://ruleofthirds.de/quantifiedself/),
 I plan to integrate my activity data with Google Maps location data to see,
 for instance, how the weather at my location influences my activity.
-earliest drafts of the Hollywood film’s screenplay, and some of the stage shows introduced new material written by Adams.
