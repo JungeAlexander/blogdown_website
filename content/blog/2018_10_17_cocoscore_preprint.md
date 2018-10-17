@@ -11,7 +11,7 @@ tags:
 
 
 Our preprint describing CoCoScore was posted on bioRxiv yesterday.
-CoCoScore is a novel context-aware co-occurrence scoring scheme for text mining applications.
+CoCoScore is a novel, context-aware co-occurrence scoring scheme for text mining applications.
 Our method can be used to extract biomedical relations, such as protein-protein interactions, from the scientific literature.
 
 ![](/posts/2017-11-26/CoCoScore-text-small.png)
