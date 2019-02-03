@@ -14,16 +14,16 @@ title = "Projects"
 
 For a list of my publications, please see my profile on [Google scholar](https://scholar.google.com/citations?user=80t0eDYAAAAJ&hl=en).
 
-# <a name="curr">Current projects</a>
+# <a name="curr">Recent projects</a>
 
-I recently started a postdoctoral research position in biomedical text mining.
-My research combines supervised machine learning approaches with unsupervised, co-occurrence based techniques to infer associations between genes, proteins, chemicals, or diseases.
+During my time as a postdoctoral researcher in biomedical text mining,
+my research combined supervised machine learning approaches with unsupervised, co-occurrence based techniques to infer associations between genes, proteins, chemicals, or diseases.
 
 ## CoCoScore
 
 ![cocoscore_logo](/projects/CoCoScore-text-small.png)
 
-We are currently developing CoCoScore, a context-aware co-occurrence scoring scheme for text mining applications.
+We developed CoCoScore, a context-aware co-occurrence scoring scheme for text mining applications.
 CoCoScore is available on [GitHub](https://github.com/JungeAlexander/cocoscore). Please open an issue, send a pull request, or contact us via mail in case you have feedback.
 
 # <a name="prev">Previous projects</a>
