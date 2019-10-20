@@ -1,4 +1,4 @@
-baseurl             = "http://www.alexanderjunge.net/"
+baseurl             = "https://www.alexanderjunge.net/"
 builddrafts         = false
 canonifyurls        = true
 contentdir          = "content"
@@ -16,13 +16,11 @@ googleAnalytics     = "UA-123-45"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [permalinks]
-about = "about/"
-blog  = "blog/:year/:month/:day/:slug/" # From Jekyll website: /:categories/:year/:month/:day/:title
-projects = "projects/"
+blog  = "blog/:slug/" # From Jekyll website: /:categories/:year/:month/:day/:title
 
 [params]
 posts_navigation = true
-latestpostscount       = 5                             # how many posts to display on the home page
+# latestpostscount       = 5                             # how many posts to display on the home page
 i18n_flags             = false                         # whether to display small country flags for available translations
 author                 = "Alexander Junge"
 cachebuster            = true                          # add the current unix timestamp in query string for cache busting css assets

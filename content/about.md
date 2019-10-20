@@ -42,6 +42,6 @@ Full curriculum vitae as `.pdf` is available upon request.
 
 This website is a personal homepage. Contents contributed by Alexander Junge are licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
-The site is built with <a target="_blank" rel="noopener" href="//gohugo.io">Hugo</a>—a static site generator made with Go and <a target="_blank" rel="noopener" href="//github.com/rstudio/blogdown">blogdown</a>. The website [source code](//github.com/JungeAlexander/blogdown_website) is available on GitHub and deployed via <a target="_blank" rel="noopener" href="//netlify.com/">Netlify</a>. It uses the <a target="_blank" rel="noopener" href="//github.com/nishanths/cocoa-hugo-theme">cocoa</a> theme. The posts are written in Markdown.
+The site is built with <a target="_blank" rel="noopener" href="//gohugo.io">Hugo</a>—a static site generator made with Go and <a target="_blank" rel="noopener" href="//github.com/rstudio/blogdown">blogdown</a>. The website [source code](//github.com/JungeAlexander/blogdown_website) is available on GitHub and deployed via <a target="_blank" rel="noopener" href="//netlify.com/">Netlify</a>. It uses the <a target="_blank" rel="noopener" href="//github.com/mtn/cocoa-eh-hugo-theme">cocoa-eh</a> theme. The posts are written in Markdown.
 
 If you find errors, please let me know by following one of the links in the footer of this website.
