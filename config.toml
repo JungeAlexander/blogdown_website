@@ -16,25 +16,9 @@ googleAnalytics     = "UA-123-45"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [permalinks]
+about = "about/"
 blog  = "blog/:year/:month/:day/:slug/" # From Jekyll website: /:categories/:year/:month/:day/:title
-
-[[menu.main]]
-name                   = "About"
-weight                 = -120
-identifier             = "about"
-url                    = "/about/"
-
-[[menu.main]]
-name                   = "Blog"
-weight                 = -110
-identifier             = "blog"
-url                    = "/blog/"
-
-[[menu.main]]
-name                   = "Projects & publications"
-weight                 = -100
-identifier             = "projects"
-url                    = "/projects/"
+projects = "projects/"
 
 [params]
 posts_navigation = true
