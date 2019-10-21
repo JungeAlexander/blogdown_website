@@ -87,6 +87,7 @@ body {
   color: #111111;
   line-height: 1.6;
   text-rendering: optimizeLegibility !important;
+  background-color: #fafafa;
 }
 .icon {
   text-rendering: geometricPrecision !important;
@@ -748,7 +749,7 @@ kbd {
 /* Fonts */
 
 {{ if not .Site.Params.disablefancyfonts  }}
-.wf-raleway-n4-active body, 
+.wf-raleway-n4-active body,
 .wf-raleway-n4-active div.header nav ul a,
 .wf-raleway-n7-active div.main .content .page-heading,
 .wf-raleway-n2-active div.main .container.f04 .content .num,
