@@ -5,6 +5,9 @@ title = "Projects"
 
 +++
 
+Here you can find an overview of some of the academic publication and projects
+I worked on between circa 2011 and 2018. Stay tuned for more updates!
+
 - [Publications](#pub)
 - [Current projects](#curr)
 - [Previous projects](#prev)
