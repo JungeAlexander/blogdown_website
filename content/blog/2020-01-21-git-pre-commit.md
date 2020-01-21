@@ -57,7 +57,7 @@ Finally install the hooks by executing:
 pre-commit install
 ```
 
-Everytime you run `git commit` both black and mypy will now be run against the files changed in the commit.
+Every time you run `git commit` both black and mypy will now be run against the files changed in the commit.
 More hooks are available at: https://pre-commit.com/hooks.html
 
 ### Skipping git pre-commit hooks
