@@ -23,7 +23,7 @@ a custom-built fastAPI-based REST API.
 
 The setup looks like this:
 
-<img src = "/posts/2020-02-02/arxiv_airflow_fastapi_psql.png", width = "300", height = "350">
+<img src = "/posts/2020-02-02/arxiv_airflow_fastapi_psql.png", width = "300" height = "350">
 
 The code is fully dockerized and available on [GitHub](https://github.com/JungeAlexander/kbase/tree/arxiv_airflow_fastapi_psql)
 along with more detailed documentation.
