@@ -11,6 +11,7 @@ tags:
   - Airflow
   - FastAPI
   - PostgreSQL
+  - Docker
 ---
 
 # Querying arXiv preprints using Apache Airflow
