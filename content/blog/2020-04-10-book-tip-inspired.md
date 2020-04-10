@@ -30,4 +30,4 @@ The book conveys a few central messages, for example:
 
 ... and a lot more (I took pages and pages of notes while reading). I very much look forward to applying all the principles  and ideas presented in this book in my daily work which will soon focus more on product ownership/management (more on that soon).
 
-Bonus: The author also publishes articles via the ['Insight' blog](https://svpg.com/articles/).
+Bonus: The author also publishes articles via the ['Insights' blog](https://svpg.com/articles/).
