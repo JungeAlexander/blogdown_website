@@ -1,5 +1,5 @@
 ---
-title: 'Book tip: Inspired by Marty Cagan
+title: 'Book tip: Inspired by Marty Cagan'
 author: 'Alexander Junge'
 date: '2020-04-10'
 slug: book-tip-inspired
