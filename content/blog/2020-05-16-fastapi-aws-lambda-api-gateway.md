@@ -22,10 +22,10 @@ The architecture roughly looks like this:
 
 ![](/posts/2020-05-16/fastapi-aws-api-gateway.png)
 
-The deployed API is a simplified version of the article REST API described in a [previous post](/blog/arxiv-airflow-fastapi-psql/).
+The deployed API is a simplified version of the REST API described in a [previous post](/blog/arxiv-airflow-fastapi-psql/).
 My code is available on [GitHub](https://github.com/JungeAlexander/kbase_db_api/tree/blog_fastapi-aws-api-gateway).
 
-Using [AWS SAM](https://aws.amazon.com/serverless/sam/), the deployment works like this
+Using [AWS SAM](https://aws.amazon.com/serverless/sam/), the deployment works like this:
 
 ```shell
 sam validate
