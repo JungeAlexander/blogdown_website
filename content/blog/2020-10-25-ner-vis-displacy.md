@@ -19,5 +19,5 @@ For example:
 
 ![](/posts/2020-10-25/ner-vis-displacy.png)
 
-The full example notebook is available as a GitHub Gist [here]().
+The full example notebook is available as a GitHub Gist [here](https://gist.github.com/JungeAlexander/dd651e5079853b31f5db6738148f85b6).
 Further documentation is available [here](https://spacy.io/usage/visualizers).
