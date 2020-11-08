@@ -11,16 +11,16 @@ tags:
 draft: false
 ---
 
-As I keep forgetting the following and keep finding outdated answers/documentation when searching online, I hope this will be useful others and to future me: 
+As I keep forgetting the following and keep finding outdated answers/documentation when searching online, I hope this will be useful to others and to future me: 
 
-## Autoreload all imported packages
+## Autoreload all imported packages in Jupyter
 
 ```
 %load_ext autoreload
 %autoreload 2
 ```
 
-## Autoreload a specific package `foo` and `bar
+## Autoreload specific packages `foo` and `bar`
 
 ```
 %load_ext autoreload
