@@ -41,12 +41,12 @@ transformers==3.5.1
 
 Furthermore, Docker needs to be installed and AWS credentials need to be set up on the host system.
 
-## Defining the model as a Python function in MLflow
+## Defining and storing the model as a Python function in MLflow
 
 Let's first download and store the pre-trained model and its tokenizer locally:
 
 ```python
-from transformers import AutoTokenizer, AutoModelForQuestionAnswering, AutoConfig
+from transformers import AutoTokenizer, AutoModelForQuestionAnswering
 
 pretrained_model = "bert-large-uncased-whole-word-masking-finetuned-squad"
 
@@ -54,7 +54,8 @@ tokenizer = AutoTokenizer.from_pretrained(pretrained_model)
 tokenizer_out_dir = "tokenizer_" + pretrained_model
 tokenizer.save_pretrained(tokenizer_out_dir)
 
-model = AutoModelForQuestionAnswering.from_pretrained(pretrained_model, return_dict=True)
+model = AutoModelForQuestionAnswering.from_pretrained(pretrained_model,
+  return_dict=True)
 model_out_dir = "model_" + pretrained_model
 model.save_pretrained(model_out_dir)
 ```
@@ -84,11 +85,12 @@ import mlflow.pyfunc
 class TransformersQAWrapper(mlflow.pyfunc.PythonModel):
 
     def load_context(self, context):
-        from transformers import AutoTokenizer, AutoModelForQuestionAnswering, AutoConfig
+        from transformers import AutoTokenizer, AutoModelForQuestionAnswering,\
+            AutoConfig
         self.tokenizer = AutoTokenizer.from_pretrained(context.artifacts["tokenizer_dir"],
-                                                       config=AutoConfig.from_pretrained(
-                                                           os.path.join(context.artifacts["tokenizer_dir"], "tokenizer_config.json")))
-        self.tansformer_model = AutoModelForQuestionAnswering.from_pretrained(context.artifacts["model_dir"], return_dict=True)
+            config=AutoConfig.from_pretrained(os.path.join(context.artifacts["tokenizer_dir"], "tokenizer_config.json")))
+        self.tansformer_model = AutoModelForQuestionAnswering.from_pretrained(context.artifacts["model_dir"],
+                                                                              return_dict=True)
 
     def predict(self, context, model_input):
         import pandas as pd
@@ -106,8 +108,9 @@ class TransformersQAWrapper(mlflow.pyfunc.PythonModel):
             answer_end_scores = model_output.end_logits
             answer_start = torch.argmax(
                 answer_start_scores
-            )  # Get the most likely beginning of answer
-            answer_end = torch.argmax(answer_end_scores) + 1  # Get the most likely end of answer
+            )  # Get the most likely beginning of answer with the argmax of the score
+            answer_end = torch.argmax(
+                answer_end_scores) + 1  # Get the most likely end of answer
             answer = tokenizer.convert_tokens_to_string(
                 tokenizer.convert_ids_to_tokens(input_ids[answer_start:answer_end]))
             answers.append(answer)
@@ -147,8 +150,8 @@ conda_env = {
 # Save the MLflow Model
 mlflow_pyfunc_model_path = "transformers_qa_mlflow_pyfunc"
 mlflow.pyfunc.save_model(
-        path=mlflow_pyfunc_model_path, python_model=TransformersQAWrapper(), artifacts=artifacts,
-        conda_env=conda_env)
+        path=mlflow_pyfunc_model_path, python_model=TransformersQAWrapper(),
+        artifacts=artifacts, conda_env=conda_env)
 ```
 
 And we can then load and query the model locally:
@@ -163,7 +166,7 @@ test_predictions = loaded_model.predict(test_data)
 print(test_predictions)
 ```
 
-which returns as pandas Series of predictions:
+which returns a pandas Series of predictions:
 
 ```
 0          alex
@@ -174,18 +177,57 @@ dtype: object
 
 ## Deploying the model
 
-Deployment works via docker and follows three steps:
+Deployment works via docker and follows three steps executed on the command line:
 
-```python
+### Step 1: Testing the deployment locally
 
+```bash
+mlflow sagemaker build-and-push-container # this only needs to be done once
+
+mlflow sagemaker run-local -m ./transformers_qa_mlflow_pyfunc # Path to mlflow_pyfunc_model_path from above
+
+curl -X POST -H "Content-Type:application/json; format=pandas-split" --data '{"columns":["text","question"],"index":[0],"data":[["My name is Alex, I am 32 and live in Copenhagen.","Where do I live?"]]}' http://127.0.0.1:8000/invocations
 ```
 
-## Querying the model
+### Step 2: Deploying the model to a SageMaker endpoint
 
+We need to specify an application name (`-a`), a path to the locally stored model (`-m`),
+a deployment region (`--region-name`) and an execution role (`-e`):
+
+```bash
+mlflow sagemaker deploy -a transformers-qa-mlflow -m ./transformers_qa_mlflow_pyfunc --region-name eu-west-1 -e arn:aws:iam::123456789012:role/service-role/Sagemaker-fullaccess
+```
+
+### Step 3: Invoking the model
+
+We do this in Python using AWS's `boto3` package:
+
+```python
+import boto3
+
+app_name = 'transformers-qa-mlflow'
+region = 'eu-west-1'
+
+sm = boto3.client('sagemaker', region_name=region)
+smrt = boto3.client('runtime.sagemaker', region_name=region)
+
+# Check endpoint status
+endpoint = sm.describe_endpoint(EndpointName=app_name)
+print("Endpoint status: ", endpoint["EndpointStatus"])    
+
+input_data = test_data.to_json(orient="split")
+prediction = smrt.invoke_endpoint(
+    EndpointName=app_name,
+    Body=input_data,
+    ContentType='application/json; format=pandas-split'
+)
+prediction = prediction['Body'].read().decode("ascii")
+print(prediction)
+```
 
 ## Further documentation
 
 - [MLflow deployment tools docs](https://mlflow.org/docs/latest/models.html#id16)
 - [MLflow example packaging an XGBoost model](https://mlflow.org/docs/latest/models.html#example-saving-an-xgboost-model-in-mlflow-format)
 - [Extractive Question Answering](https://huggingface.co/transformers/task_summary.html#extractive-question-answering)
-
+- [Book: Learn Amazon SageMaker](https://www.packtpub.com/product/learn-amazon-sagemaker/9781800208919)
