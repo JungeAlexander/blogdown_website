@@ -16,12 +16,12 @@ tags:
 draft: false
 ---
 
-Deploying a trained machine learning model behind a REST API endpoint is an important
+Deploying a trained machine learning model behind a REST API endpoint is an common
 problem that needs to be solved on the last mile to getting the model into production.
 The [MLflow](https://mlflow.org) package provides a nice abstraction layer that makes deployment
-via AWS SageMaker (or Microsoft Azure ML or Apache Spark UDF) really easy.
+via AWS SageMaker (or Microsoft Azure ML or Apache Spark UDF) quite easy.
 
-Here is a minimal example that illustrates how a PyTorch-based pre-trained
+Here follows an example that illustrates how a PyTorch-based pre-trained
 [HuggingFace transformers](https://huggingface.co/transformers)
 [Extractive Question Answering NLP model](https://huggingface.co/bert-large-uncased-whole-word-masking-finetuned-squad/tree/main)
 can be deployed to an AWS SageMaker endpoint.
@@ -29,7 +29,7 @@ Note that MLflow provides many additional MLOps features which I will not addres
 
 ## Packages and tools required
 
-All code below is tested using Python 3.8 and with the following packages:
+All code below was developed using Python 3.8 with the following packages:
 
 ```
 boto3==1.16.25
@@ -50,17 +50,17 @@ from transformers import AutoTokenizer, AutoModelForQuestionAnswering
 
 pretrained_model = "bert-large-uncased-whole-word-masking-finetuned-squad"
 
-tokenizer = AutoTokenizer.from_pretrained(pretrained_model)
-tokenizer_out_dir = "tokenizer_" + pretrained_model
-tokenizer.save_pretrained(tokenizer_out_dir)
-
 model = AutoModelForQuestionAnswering.from_pretrained(pretrained_model,
   return_dict=True)
 model_out_dir = "model_" + pretrained_model
 model.save_pretrained(model_out_dir)
+
+tokenizer = AutoTokenizer.from_pretrained(pretrained_model)
+tokenizer_out_dir = "tokenizer_" + pretrained_model
+tokenizer.save_pretrained(tokenizer_out_dir)
 ```
 
-These model artifacts will later be passed on to MLflow as a dictionary:
+These locally model artifacts will later be passed on to MLflow as a dictionary:
 
 ```python
 artifacts = {
@@ -69,13 +69,14 @@ artifacts = {
 }
 ```
 
-The model inference logic is now wrapped in a class that inherits from `mlflow.pyfunc.PythonModel`.
+As a step towards deployment, the model inference logic is now wrapped in a class that inherits from `mlflow.pyfunc.PythonModel`.
 There are two functions to implement:
 
 - `load_context()` loads the model artifacts defined above from a [PythonModelContext](https://mlflow.org/docs/latest/python_api/mlflow.pyfunc.html#mlflow.pyfunc.PythonModelContext).
 - `predict()` runs model inference on the given input and returns the model's output; here an input pandas DataFrame with column `question` specifying the query question and column `text` from which the answer will be extracted is turned into a pandas Series of predicted answers.
 
-Full documentation is available [here](https://mlflow.org/docs/latest/python_api/mlflow.pyfunc.html#mlflow.pyfunc.PythonModel).
+Full documentation of `mlflow.pyfunc.PythonModel` is available [here](https://mlflow.org/docs/latest/python_api/mlflow.pyfunc.html#mlflow.pyfunc.PythonModel) and my implementation
+looks as follows:
 
 ```python
 import os
@@ -87,10 +88,14 @@ class TransformersQAWrapper(mlflow.pyfunc.PythonModel):
     def load_context(self, context):
         from transformers import AutoTokenizer, AutoModelForQuestionAnswering,\
             AutoConfig
+        
+        # load tokenizer and model from artifacts in model context
         self.tokenizer = AutoTokenizer.from_pretrained(context.artifacts["tokenizer_dir"],
             config=AutoConfig.from_pretrained(os.path.join(context.artifacts["tokenizer_dir"], "tokenizer_config.json")))
-        self.tansformer_model = AutoModelForQuestionAnswering.from_pretrained(context.artifacts["model_dir"],
-                                                                              return_dict=True)
+            
+        self.tansformer_model = AutoModelForQuestionAnswering.from_pretrained(
+            context.artifacts["model_dir"],
+            return_dict=True)
 
     def predict(self, context, model_input):
         import pandas as pd
@@ -117,7 +122,8 @@ class TransformersQAWrapper(mlflow.pyfunc.PythonModel):
         return pd.Series(answers)
 ```
 
-Lastly, we save the model locally, including a conda environment specifying its dependencies:
+Lastly, we save the model locally to the directory `transformers_qa_mlflow_pyfunc/`,
+including a conda environment specifying its dependencies:
 
 ```python
 from sys import version_info
@@ -159,9 +165,15 @@ And we can then load and query the model locally:
 ```python
 loaded_model = mlflow.pyfunc.load_model(mlflow_pyfunc_model_path)
 
+# Evaluate the model
 import pandas as pd
-test_data = pd.DataFrame({"text": ["My name is Alex, I am 32 and live in Copenhagen."] * 3,
-                          "question": ["What is my name?", "How old am I?", "Where do I live?"]})
+
+test_data = pd.DataFrame(
+    {
+        "text": ["My name is Alex, I am 32 and live in Copenhagen."] * 3,
+        "question": ["What is my name?", "How old am I?", "Where do I live?"],
+    }
+)
 test_predictions = loaded_model.predict(test_data)
 print(test_predictions)
 ```
@@ -200,7 +212,7 @@ mlflow sagemaker deploy -a transformers-qa-mlflow -m ./transformers_qa_mlflow_py
 
 ### Step 3: Invoking the model
 
-We do this in Python using AWS's `boto3` package:
+We invoke the model in Python using AWS's `boto3` package:
 
 ```python
 import boto3
@@ -225,9 +237,11 @@ prediction = prediction['Body'].read().decode("ascii")
 print(prediction)
 ```
 
-## Further documentation
+🤩
+
+## Further reading
 
 - [MLflow deployment tools docs](https://mlflow.org/docs/latest/models.html#id16)
 - [MLflow example packaging an XGBoost model](https://mlflow.org/docs/latest/models.html#example-saving-an-xgboost-model-in-mlflow-format)
-- [Extractive Question Answering](https://huggingface.co/transformers/task_summary.html#extractive-question-answering)
+- [HuggingFace transformers Extractive Question Answering example](https://huggingface.co/transformers/task_summary.html#extractive-question-answering)
 - [Book: Learn Amazon SageMaker](https://www.packtpub.com/product/learn-amazon-sagemaker/9781800208919)
