@@ -20,8 +20,15 @@ draft: true
 
 AWS Glue to get data into S3 following [this](https://dev.to/amree/exporting-data-from-rds-to-s3-using-aws-glue-mai)
 
+Good example ![]()
+
+Bad example - see missing labels bottom left of the screenshot ![]()
+
 # Part 3: Data labelling
 
+Workflow:
+
+RDS -> Glue ETL -> Python script -> manifest for SageMaker GroundTruth -> 
 
 # Part 4: ML project
 
