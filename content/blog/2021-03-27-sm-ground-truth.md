@@ -1,7 +1,7 @@
 ---
 title: 'Labeling data in Amazon SageMaker Ground Truth'
 author: 'Alexander Junge'
-date: '2021-03-28'
+date: '2021-03-27'
 slug: sm-ground-truth
 categories:
   - Podcasts
@@ -14,7 +14,7 @@ draft: true
 
 Tried and nice experience, like hotkeys 
 
-![](/posts/2021-03-28/sm_ground_truth_ner_podcast.png)
+![](/posts/2021-03-27/sm_ground_truth_ner_podcast.png)
 
 Used NER but other tasks around text, image, video labeling supported, too.
 
