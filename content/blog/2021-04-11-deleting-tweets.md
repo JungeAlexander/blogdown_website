@@ -1,5 +1,5 @@
 ---
-title: 'Deleting old, unpopular tweets'
+title: 'Deleting old tweets'
 author: 'Alexander Junge'
 date: '2021-04-11'
 slug: deleting-tweets
@@ -10,7 +10,7 @@ tags:
 draft: false
 ---
 
-It's good to clean up regularly. Today I delete all my tweets that
+It's good to clean up regularly. I just wrote a little script to delete all my tweets that
 
 - are older than two years
 
