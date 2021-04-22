@@ -1,7 +1,7 @@
 ---
 title: 'Experimenting with ML-powered search in Amazon Kendra'
 author: 'Alexander Junge'
-date: '2021-04-25'
+date: '2021-04-22'
 slug: kendra-test-cfn
 categories:
   - search
@@ -42,13 +42,13 @@ defining the necessary AWS roles are available on [GitHub](https://github.com/Ju
 
 Using Kendra's default search interface, I tested both question- and keyword-based searches:
 
-![](/posts/2021-04-25/bandit.png)
+![](/posts/2021-04-22/bandit.png)
 
-![](/posts/2021-04-25/data_warehouse.png)
+![](/posts/2021-04-22/data_warehouse.png)
 
-![](/posts/2021-04-25/hadoop.png)
+![](/posts/2021-04-22/hadoop.png)
 
-![](/posts/2021-04-25/python_rest.png)
+![](/posts/2021-04-22/python_rest.png)
 
 Overall, the results look useful and Kendra is able to pull out relevant information.
 A logical next step would be to use this demo to show it to potential users/stakeholders,
