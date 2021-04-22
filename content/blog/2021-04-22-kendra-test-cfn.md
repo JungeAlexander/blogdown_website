@@ -9,7 +9,7 @@ tags:
   - AWS
   - Kendra
   - CloudFormation
-draft: true
+draft: false
 ---
 
 [Amazon Kendra](https://aws.amazon.com/kendra/) is a managed search service offered by AWS.
