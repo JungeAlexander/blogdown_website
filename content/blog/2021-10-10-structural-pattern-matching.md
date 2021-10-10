@@ -2,7 +2,7 @@
 title: 'Python 3.10: Structural pattern matching and other new features for data science'
 author: 'Alexander Junge'
 date: '2021-10-10'
-slug: structural-pattern-matching-data-science
+slug: python-3-10-match-statement-data-science
 categories:
   - data science
 tags:
