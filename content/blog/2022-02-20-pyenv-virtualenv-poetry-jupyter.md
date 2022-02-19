@@ -19,3 +19,12 @@ draft: true
 
 ![](/posts/2022-02-20/pyenv-virtualenv-poetry-jupyter.png)
 
+
+Which problems this actually solves for me:
+1 - jupyter plugins
+2 - graduating from notebook -> .py -> package smooth
+
+3 -pyenv, pyenv virtualenv, pipx, poetry, ipykernel
+
+Possible issues: upgrading python/jupyter breaking jupyter - but maybe not since each pykernel is still its own venv
+
