@@ -12,7 +12,7 @@ tags:
   - pyenv
   - Jupyter
   - pipx
-draft: true
+draft: false
 ---
 
 [Jupyter notebooks edited in JupyterLab](https://try.jupyter.org) are my tool of choice when working with and exploring data in Python.
