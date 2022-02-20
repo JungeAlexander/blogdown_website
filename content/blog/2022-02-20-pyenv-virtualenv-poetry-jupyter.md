@@ -81,9 +81,8 @@ git add pyproject.toml poetry.lock  # add files produced by poetry
 # commit, track more files, push to a remote repo
 ```
 
-Besides setting up the project directory and virtual environment, it registers
-the my-project kernel in the JupyterLab installation living in the 'base' environment.
-It can be seen here:
+Besides setting up the project directory and virtual environment, this registers
+the my-project kernel in the JupyterLab installation living in the 'base' environment:
 
 ![](/posts/2022-02-20/jupyter.png)
 
@@ -94,8 +93,10 @@ For installing the tools used, refer to the links listed above.
 
 My approach has a few caveats:
 
-1. Upgrading Python or JupterLab in the base environment could become messy when breaking changes occur. However, all project code and dependencies is and will always be self-contained and reproducible - that's what really matters.
+1. Upgrading Python or JupterLab in the base environment could become messy when breaking changes occur. Only time will tell how big of a problem this really is in practive. However, all project code and dependencies is and will be self-contained and reproducible - that's what really matters.
 2. There a quite a few tools at play here - these will all be updated or replaced by newer ones. There is no way around embracing change here.
 3. Although running Python under Windows got much easier recently, I would be surprised if all this worked out of the box outside Linux or MacOS (let me know if it does!). So be careful/patient when trying to adapt this process on a Windows box!
+
+## End
 
 Thanks for reading and do let me know if you have any feedback or suggestions for further improvements.
