@@ -52,7 +52,7 @@ My setup currently looks like this:
 
 The most important ideas are:
 
-1. I have a virtual environment called 'base' running JupyterLab and all extensions. The 'base' environment is created using `pyenv virtualenv` once and activated whenever I open a terminal (in my `.zshrc`).
+1. I have a virtual environment called 'base' running JupyterLab and all extensions. The 'base' environment is created using `pyenv virtualenv` once and activated whenever I open a terminal (by editing my `.zshrc`).
 2. Each project lives in in its own virtual environment manged by `pyenv virtualenv`.
 3. Each project is a `poetry` project and `poetry` is used to install dependencies.
 4. `ipykernel` is used to register each project's virtual environment as a kernel in the Jupyter instance living in the 'base' environment.
@@ -82,12 +82,13 @@ git add pyproject.toml poetry.lock  # add files produced by poetry
 ```
 
 Besides setting up the project directory and virtual environment, it registers
-the my-project kernel in the JupyterLab installation living in the 'base' environment:
+the my-project kernel in the JupyterLab installation living in the 'base' environment.
+It can be seen here:
 
 ![](/posts/2022-02-20/jupyter.png)
 
-Note that the commands above to not set up the 'base' environment - let me know if that would be of interest.
-Also for installing the tools used, refer to the links listed above.
+Note that the commands above do not set up the 'base' environment - let me know if that would be of interest.
+For installing the tools used, refer to the links listed above.
 
 ## Caution
 
@@ -95,6 +96,6 @@ My approach has a few caveats:
 
 1. Upgrading Python or JupterLab in the base environment could become messy when breaking changes occur. However, all project code and dependencies is and will always be self-contained and reproducible - that's what really matters.
 2. There a quite a few tools at play here - these will all be updated or replaced by newer ones. There is no way around embracing change here.
-3. Although running Python under Windows got much easier recently, I would be surprised if all this worked out of the box outside Linux or MacOS (let me know if it does!). Be careful when trying to adapt this process on a Windows box!
+3. Although running Python under Windows got much easier recently, I would be surprised if all this worked out of the box outside Linux or MacOS (let me know if it does!). So be careful/patient when trying to adapt this process on a Windows box!
 
 Thanks for reading and do let me know if you have any feedback or suggestions for further improvements.
