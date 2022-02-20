@@ -7,7 +7,11 @@ title = "About"
 
 Thank you for visiting my personal homepage!
 
-My name is Alexander Junge, I am currently working as a data scientist in pharmaceutical R&D and live in Copenhagen, Denmark.
+My name is Alexander Junge, I am currently working at [Corti](https://www.corti.ai) where
+we bring machine learning to conversations between healthcare professionals and patients.
+I live in Copenhagen, Denmark.
+
+Before that I worked as a data scientist in pharmaceutical R&D at Novo Nordisk.
 In 2017, I obtained a PhD degree in RNA Bioinformatics and afterwards I was a postdoctoral researcher in biomedical text mining. More information about me and my CV can be found below. You may furthermore be interested in my [projects](/projects) and [publications](https://scholar.google.com/citations?user=80t0eDYAAAAJ&hl=en) I worked on during my time as a PhD student and postdoctoral researcher.
 
 From time to time I also write about my research and general interests on my [blog](/blog).
