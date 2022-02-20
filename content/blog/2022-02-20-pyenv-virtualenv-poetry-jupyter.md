@@ -15,33 +15,52 @@ tags:
 draft: true
 ---
 
-[Jupyter notebooks](https://try.jupyter.org) are the tool of choice when working with and exploring data in Python.
-I recently read the ["Everything Gets a Package""](https://www.ethanrosenthal.com/2022/02/01/everything-gets-a-package) post where Ethan Rosenthal describes his data science project setup.
+[Jupyter notebooks edited in JupyterLab](https://try.jupyter.org) are my tool of choice when working with and exploring data in Python.
+I frequently mature code stored in notebooks to importable `.py` files and further to stand-alone Python packages.
+I recently read the ["Everything Gets a Package"](https://www.ethanrosenthal.com/2022/02/01/everything-gets-a-package) post
+where Ethan Rosenthal describes his data science project setup.
+This led me to rethink how I manage virtual environments, dependencies and JupyterLab installations across projects.
+I would like to share my current process here which three main problems for me:
 
-![](/posts/2022-02-20/pyenv-virtualenv-poetry-jupyter.png)
+1. Use and manage **one JupyterLab installation** across projects with useful JupyterLab extensions installed. Before adopting this process, each project I worked on came with its own JupyterLab which kept me from customizing and tweaking JupyterLab to maximize efficiency for every single project.
+2. Graduating code from a notebook to `.py` file to package should be easy (this is the central point in Ethan's post which is achieved using `poetry`).
+3. Of course, projects and tools used in my workflow should be separated into virtual environments.
 
+If this sounds interesting, read on.
 
-Which problems this actually solves for me:
-1 - jupyter plugins
-2 - graduating from notebook -> .py -> package smooth
+## Tools
 
-3 -pyenv, pyenv virtualenv, pipx, poetry, ipykernel
-
-A short introduction to the tools used here. A detailed description is out-of-scope here, just follow the links to learn more: 
+Here is a short introduction to the tools used in my process.
+A detailed description is out-of-scope here, just follow the links to learn more: 
 
 - `pyenv` [link](https://github.com/pyenv/pyenv) - simple and transparent management and installation of different Python versions.
-- `pyenv virtualenv` [link](https://github.com/pyenv/pyenv-virtualenv) - management of virtual environements via `pyenv`.
+- `pyenv virtualenv` [link](https://github.com/pyenv/pyenv-virtualenv) - management of virtual environments via `pyenv`.
 - `pipx` [link](https://github.com/pypa/pipx) - system-wide installation of Python applications in their own environments.
 - `poetry` [link](https://github.com/python-poetry/poetry) - dependency management for Python projects and applications.
 - `JupyterLab` [link](https://github.com/jupyterlab/jupyterlab) - browser-based user interface to write Python code, interact with datasets, visualize them and much more.
-- `ipykernel` [link](https://github.com/ipython/ipykernel) - Ipython as a kernel for Jupyter; I am using it to register project-level virtual environments as kernels in Jupyter.
+- `JupyterLab` extensions - I do not want to point out specific extensions here (that could be a later post) but there are many, see e.g., awesome [list 1](https://github.com/mauhai/awesome-jupyterlab) and [list 2](https://github.com/mauhai/awesome-jupyterlab)
+- `ipykernel` [link](https://github.com/ipython/ipykernel) - IPython as a kernel for Jupyter; I am using it to register project-level virtual environments as kernels in Jupyter.
 
-Extensions [list 1](https://github.com/mauhai/awesome-jupyterlab) and [list 2](https://github.com/mauhai/awesome-jupyterlab)
+## Approach
 
-Possible issues: upgrading python/jupyter breaking jupyter - but maybe not since each pykernel is still its own venv
-Although Python story better under Win, no idea how well this works
-this will change
+My setup currently looks like this:
 
-I am not proving code examples in this post what would be happy to if there is interest - let me know.
+![](/posts/2022-02-20/pyenv-virtualenv-poetry-jupyter.png)
 
+TODO
 
+## Code 
+
+```shell
+TODO
+```
+
+## Caution
+
+My approach has a few caveats:
+
+1. Upgrading Python or JupterLab in the base environment could become messy when breaking changes occur. However, all project code and dependencies is and will always be self-contained and reproducible - that's what really matters.
+2. There a quite a few tools at play here - these will all be updated or replaced by newer ones. There is no way around embracing change here.
+3. Although running Python under Windows got much easier recently, I would be surprised if all this worked out of the box outside Linux or MacOS (let me know if it does!). Be careful when trying to adapt this process on a Windows box!
+
+Thanks for reading and do let me know if you have any feedback or suggestions for further improvements.
