@@ -7,7 +7,7 @@ title = "About"
 
 Thank you for visiting my personal homepage!
 
-My name is Alexander Junge, I am currently working at [Corti](https://www.corti.ai) where
+My name is Alexander Junge, I am currently a Lead Data Scientist at [Corti](https://www.corti.ai) where
 we bring machine learning to conversations between healthcare professionals and patients.
 I live in Copenhagen, Denmark.
 
@@ -26,7 +26,8 @@ From time to time I also write about my research and general interests on my [bl
 
 ## Brief CV
 
-- *02/2019--present*: Data scientist in pharmaceutical R&D at Novo Nordisk A/S
+- *11/2021 -- present*: Lead data scientist in pharmaceutical R&D at Corti ApS
+- *02/2019--10/2021*: Senior data scientist in pharmaceutical R&D at Novo Nordisk A/S
 - *04/2017--01/2019*: Postdoctoral researcher in biomedical text mining at the [Novo Nordisk Foundation Center for Protein Research](http://www.cpr.ku.dk/), University of Copenhagen, Denmark. I am a member of the [Cellular Network Biology group](http://www.cpr.ku.dk/research/disease-systems-biology/jensen/) headed by Lars Juhl Jensen, PhD.
 - *03/2014--03/2017*: PhD student in theoretical and applied RNA Bioinformatics at the [Center for non-coding RNA in Technology and Health (RTH)](http://rth.dk/) under the supervision of Jan Gorodkin, PhD.
 - *10/2011--02/2014*: Master of Science in Bioinformatics, Saarland University, Saarbrücken, Germany. Thesis supervisor: Dr Jan Baumbach
