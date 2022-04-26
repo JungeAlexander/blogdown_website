@@ -1,5 +1,5 @@
 ---
-title: 'Hosting ML apps easily and freely via Hugging Face Spaces'
+title: 'Hosting Machine Learning apps easily and freely via Hugging Face Spaces'
 author: 'Alexander Junge'
 date: '2022-04-26'
 slug: app-hf-spaces-intro
@@ -11,41 +11,41 @@ tags:
   - Python
   - gradio
   - streamlit
-draft: true
+draft: false
 ---
 
-Data science and machine learning frequently involve prototyping models and solutions,
-showing them to potential users and iterating to improve both model and problem-solution fit.
+Data science and machine learning (ML) frequently involve prototyping models as part of ML apps,
+showing them to potential users to get feedback, and iterating to improve both model as well as problem-solution fit.
+Tools like [Gradio](https://gradio.app/) and [Streamlit](https://streamlit.io/) make it easy to develop visually appealing ML apps but
+making these apps available to users is not trivial and usually involves paying for cloud hosting and overcoming various technical hurdles.
 
-Tools like [Gradio](https://gradio.app/) or [Streamlit](https://streamlit.io/) allow fast prototyping of ML and data apps but making apps available
-to users is not trivial and usually involve paying for cloud hosting and overcoming various technical hurdles.
+[Hugging Face Spaces](https://huggingface.co/spaces) allows you to host and share ML apps easily and for free.
+Here is an example from a recent hobby project:
 
-[Hugging Face Spaces](https://huggingface.co/spaces) allows you to host and share ML apps easily and for free. Here is an example:
-
-## Example app running of Hugging Face Spaces
-
-Sometimes takes a bit for the app to load so not suited for production but only for testing and prototyping or, as in my case,
-to host apps for pet projects or build a portfolio
+## Example app computing patent phrase similarity running on Hugging Face Spaces
 
 ![](/posts/2022-02-20/pyenv-virtualenv-poetry-jupyter.png)
 
-I built a sample app using gradio that 
-It is based on the *Google Patent Phrase Similarity Dataset* used in the
+I built this sample app using Gradio within a few hours. 
+It scores the semantic similarity of pairs of phrases from U.S. patents.
+Similarity scores are between 0 and 1; higher scores mean higher similarity.
+A score is defined as the cosine similarity of the phrase-wise embeddings produced by the [AI-Growth-Lab/PatentSBERTa]() SentenceTransformer model and
+could be used for down-stream tasks like clustering or search ranking.
+The app and its examples are based on the *Google Patent Phrase Similarity Dataset* used in the
 ['U.S. Patent Phrase to Phrase Matching' Kaggle competition](https://www.kaggle.com/competitions/us-patent-phrase-to-phrase-matching/overview).
 
-The app scores pairs of phrases from U.S. patents according to their similarity.
-Similarity scores are between 0 and 1, higher scores mean higher similarrity.
-The scores are computed as the cosine similarity of embeddings produced by the [AI-Growth-Lab/PatentSBERTa]() SentenceTransformer model.
+App is available on this [Hugging Face Space](https://huggingface.co/spaces/jungealexander/uspppm-demo).
+The underlying code is on [GitHub](https://github.com/JungeAlexander/uspppm-demo) and I am using GitHub Actions to keep code and app in sync.
 
-Not made for best performance but rather as an example
+This ML App is not tweaked for optimal performance - neither from an ML nor from a inference time perspective - but rather as an example of
+what's with a few lines of code (around 45 currently).
 
-App is available on [Hugging Face Space](https://huggingface.co/spaces/jungealexander/uspppm-demo).
-The underlying code is on [GitHub](https://github.com/JungeAlexander/uspppm-demo) and I am using GitHub Actions to keep code and app in sync. 
+## Workflow for deploying the app via GitHub Actions
 
-## Workflow
+Deploying the app was simple and involved the following steps:
 
-- Create a new Space [https://huggingface.co/new-space](https://huggingface.co/new-space)
-- This will create a git repository which I clone to my machine. Since I want to use GitHub as the primary repository location for my code, while setting up a GitHub Action to keep the deployed Space updated later, I set up my `.git/config` with two remote locations - ‘origin’ pointing to the GitHub repo and ‘space’ pointing to the Space repo.
+- Create a new Space [https://huggingface.co/new-space](https://huggingface.co/new-space).
+- The Space comes with git repository which I cloned to my machine. Since I want to use GitHub as the primary repository location for my code, while setting up a GitHub Action to keep the deployed Space updated later, I set up my `.git/config` with two remote locations - ‘origin’ pointing to the GitHub repository and ‘space’ pointing to the Space repo, e.g.:
 
 ```shell
 [remote "origin"]
@@ -56,9 +56,9 @@ The underlying code is on [GitHub](https://github.com/JungeAlexander/uspppm-demo
         fetch = +refs/heads/*:refs/remotes/space/*
 ```
 
-- Create a write-access token for HugginFace account: [https://huggingface.co/settings/tokens](https://huggingface.co/settings/tokens)
-- Setting up GitHub Action [https://huggingface.co/docs/hub/spaces#manage-app-with-github-actions](https://huggingface.co/docs/hub/spaces#manage-app-with-github-actions) Save as repository secret
+- Create a write-access token for your Hugging Face account: [https://huggingface.co/settings/tokens](https://huggingface.co/settings/tokens)
+- Set up the GitHub Action as defined in the [Hugging Face docs](https://huggingface.co/docs/hub/spaces#manage-app-with-github-actions) and save your API token as a GitHub repository secret
 
 ## Summary
 
-Easy and free hosting of protoypes and apps showcasing your work - give it a try.
+Spaces makes it possible to host ML app protoypes and to showcase your work to the world - give it a try, it's free and easy to get started.
