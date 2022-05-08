@@ -1,5 +1,5 @@
 ---
-title: 'PyScript: beyond the hype'
+title: 'PyScript: looking beyond the hype'
 author: 'Alexander Junge'
 date: '2022-05-08'
 slug: pyscript_hype_or_real
@@ -14,10 +14,10 @@ tags:
 draft: false
 ---
 
-PyScript was announced on April 30th at PyCon US by Peter Wang, CEO of Anaconda Inc., and in an accompanying [blog post](https://engineering.anaconda.com).
-The announcement sparked a lot of interest and excitement in the Python community and, frankly, generated a lot of hype.
-To be clear, PyScript is not a JavaScript replacement (and it does not want to be).
-Instead, PyScript aims to further democratize the *superpower* of programming by bringing Python to every browser - which is a SUPER important goal and I very much hope this will work out.
+PyScript was announced on April 30th 2022 at PyCon US by Peter Wang, CEO of Anaconda Inc., and in an accompanying [blog post](https://engineering.anaconda.com).
+The announcement sparked a lot of interest and excitement in the Python community and generated a lot of hype.
+PyScript is not a JavaScript replacement (and it does not want to be).
+PyScript instead aims to further democratize the *superpower* of programming by bringing Python to every browser - which is a very important goal and I very much hope this will work out.
 
 In this post, I will summarize my experience with PyScript so far and give some examples to help you get started:
 
@@ -32,7 +32,7 @@ At is core, PyScript allows you add Python code to your HTML by introducing a ne
 </html>
 ```
 
-A "Hello World" example is rendered via GitHub Pages[here]( https://jungealexander.github.io/pyscript-demo/) with source code [here](https://github.com/JungeAlexander/pyscript-demo/blob/main/index.html).
+A "Hello World" example is rendered via GitHub Pages [here]( https://jungealexander.github.io/pyscript-demo/) and its source code is [here](https://github.com/JungeAlexander/pyscript-demo/blob/main/index.html).
 
 What is HUGE is that you can simply use your favorite Python packages by defining a `<py-env>` tag:
 
@@ -48,13 +48,13 @@ What is HUGE is that you can simply use your favorite Python packages by definin
 </html>
 ```
 
-Which looks like this:
+Again, this is Python running in a browser - including numpy, pandas, and seaborn/matplotlib - 🤯🤯
+
 ![seaborn in the browser using PyScript](/posts/2022-05-08/seaborn_pyscript.png)
 
-Again, this is Python running in a browser - including numpy, pandas, and seaborn/matplotlib - 🤯
-See the [html version](https://jungealexander.github.io/pyscript-demo/seaborn_pairplot.html) and [source code](https://github.com/JungeAlexander/pyscript-demo/blob/main/seaborn_pairplot.html).
+Check also the [html version](https://jungealexander.github.io/pyscript-demo/seaborn_pairplot.html) and [source code](https://github.com/JungeAlexander/pyscript-demo/blob/main/seaborn_pairplot.html).
 
-You can even load your own `.py` files:
+You can even load your own `.py` files in PyScript:
 
 ```html
 <html>
@@ -76,13 +76,14 @@ print(say_hello("Stranger"))
 ## It feels like a tech demo
 
 From a tech perspective, PyScript builds on [Pyodide](https://pyodide.org/), a port of CPython to WebAssembly/WASM which in turn is supported by modern browsers.
-For now, PyScript feels like a (really cool) tech demo: loading PyScript websites is a little slow, it is experimental and there is a growing list of [issues and fixes](https://github.com/pyscript/pyscript/issues).
+
+For now, PyScript feels like a (really cool) tech demo - but still like a demo: loading PyScript HTML websites is slow, PyScript itself is experimental and there is a growing list of [issues and fixes](https://github.com/pyscript/pyscript/issues).
 
 ## Summary
 
 PyScript for sure is real and cool but there is a lot of hype, too.
 Only time will tell if PyScript will live up to its goals and
-democratize programming further by bringing Python to every browser out there.
+democratize programming further by bringing Python and its fast ecosystem to every browser out there.
 There is still [a lot to be done](https://twitter.com/pwang/status/1521138505983959040) but PyScript for sure is fun to explore and I look
 forward to seeing where things are going.
 
