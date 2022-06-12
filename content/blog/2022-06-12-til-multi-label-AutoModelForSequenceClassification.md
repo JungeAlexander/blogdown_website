@@ -1,5 +1,5 @@
 ---
-title: 'Multi-label classification using 🤗 Hugging Face Transformers's AutoModelForSequenceClassification'
+title: 'Multi-label classification using Hugging Face Transformers's AutoModelForSequenceClassification'
 author: 'Alexander Junge'
 date: '2022-06-12'
 slug: til-multi-label-AutoModelForSequenceClassification
