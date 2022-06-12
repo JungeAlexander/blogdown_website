@@ -1,4 +1,4 @@
-title: 'Multi-label classification using 🤗 Transformers's AutoModelForSequenceClassification'
+title: 'Multi-label classification using Hugging Face Transformers's AutoModelForSequenceClassification'
 author: 'Alexander Junge'
 date: '2022-06-12'
 slug: til-multi-label-AutoModelForSequenceClassification
@@ -30,6 +30,7 @@ model = AutoModelForSequenceClassification.from_pretrained(
 )
 ```
 
+However, this comes with a few additional requirements on the dataset that I did not find good documentation for online. 
 Since I struggled to make it work, I want to capture what I learned along the way here:
 
 1. The model expects the target variable of the dataset to be named `labels`.
@@ -39,6 +40,6 @@ Since I struggled to make it work, I want to capture what I learned along the wa
 Another problem I encountered:
 The dataset I worked with already came with a `labels` feature that did not follow the above requirements.
 The easiest way to fix this was renaming the old labels, e.g., to `labels_`, and introducing a new `labels` feature
-following the above requirements based on the `labels_` feature.
+following the requirements.
 
 Hope this helps.
