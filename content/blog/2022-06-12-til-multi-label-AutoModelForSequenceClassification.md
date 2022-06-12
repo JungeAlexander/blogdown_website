@@ -1,4 +1,5 @@
-title: 'Multi-label classification using Hugging Face Transformers's AutoModelForSequenceClassification'
+---
+title: 'Multi-label classification using 🤗 Hugging Face Transformers's AutoModelForSequenceClassification'
 author: 'Alexander Junge'
 date: '2022-06-12'
 slug: til-multi-label-AutoModelForSequenceClassification
@@ -12,7 +13,7 @@ tags:
 draft: false
 ---
 
-🤗 Transformers `AutoModelForSequenceClassification` offers a quick way to fine-tune
+🤗 Hugging Face Transformers `AutoModelForSequenceClassification` offers a quick way to fine-tune
 a pre-trained language model for a text classification task.
 `AutoModelForSequenceClassification` supports multi-label classification via its
 `problem_type` argument:
