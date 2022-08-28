@@ -15,7 +15,7 @@ draft: false
 I recently finished (and enjoyed) reading Chip Huyen's book ["Designing Machine Learning Systems"](https://github.com/chiphuyen/dmls-book)
 published by O'Reilly.
 
-<img src="/posts/2022-08-28/book-designing-ml-systems.png" alt="cover" width="300"/>
+<img src="/posts/2022-08-28/book-designing-ml-systems.png" alt="cover" width="200"/>
 
 I'd recommend this book to anyone looking for an introduction to what it takes to make machine
 learning (ML) work in the real world, i.e., outside a pure research setting and in real products.
