@@ -19,6 +19,7 @@ From time to time I also write about my research and general interests on my [bl
 ## Other places to find me
 
 - [Twitter](https://twitter.com/JungeAlexander) 
+- [Mastodon](https://fosstodon.org/@jungealexander)
 - [GitHub](https://github.com/JungeAlexander)
 - [LinkedIn](https://www.linkedin.com/in/alexanderjunge)
 - [SlideShare](https://www.slideshare.net/AlexanderJunge1)

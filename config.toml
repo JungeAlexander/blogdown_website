@@ -39,7 +39,7 @@ linkedin               = "alexanderjunge"
 noshowreadtime         = true                         # if true, don't show "<x> minutes read" in posts
 selfintro              = ""                            # appears in the site header when set to a non-empty string
 twitter                = "JungeAlexander"
-#mastodon               = "//example.com/@you"
+mastodon               = "//fosstodon.org/@jungealexander"
 
 highlightjs            = true
 # highlightjslanguages = ["go"]                        # additional languages not included in the "common" set
