@@ -31,14 +31,15 @@ Or you can format dates and print weekdays instead:
 Happy Monday!
 ```
 
-Or round you can round floating point numbers:
+Or you can round floating point numbers:
 
 ```python
 >>> print(f"{1.1111:.2f}")
 1.11
 ```
 
-The trouble is that I ALWAYS forget this syntax and need to search online every single time.
+The trouble is that I ALWAYS forget this syntax and need to search online every single time without good hits.
+
 BUT: this is now solved thanks to this awesome cheatsheet I discovered today: https://fstring.help/cheat/
 🤩
 
