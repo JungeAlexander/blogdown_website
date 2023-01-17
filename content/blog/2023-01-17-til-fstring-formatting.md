@@ -2,7 +2,7 @@
 title: 'TIL: f-string formatting - a cheat sheet'
 author: 'Alexander Junge'
 date: '2023-01-17'
-slug: til-yes
+slug: til-fstring-formatting
 categories:
   - TIL
 tags:
