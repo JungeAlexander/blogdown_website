@@ -7,7 +7,7 @@ categories:
   - career advice
 tags:
   - personal growth
-draft: true
+draft: false
 ---
 
 When I reflect on the times when I rapidly developed as a person or as a professional, I notice that periods of growth followed a decision to leave a comfortable, current state behind and instead do something new. This new thing often felt challenging, uncomfortable, and scary. I failed more often than when I knew what I was doing. But I think leaving your comfort zone is a requirement to grow. 
