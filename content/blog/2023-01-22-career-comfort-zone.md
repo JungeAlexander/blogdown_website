@@ -10,6 +10,9 @@ tags:
 draft: false
 ---
 
+![](/posts/2023-01-22/growth-unsplash.jpg)
+Photo credit: <a href="https://unsplash.com/@scw1217?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Suzanne D. Williams</a> on <a href="https://unsplash.com/photos/VMKBFR6r_jg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
 When I reflect on the times when I rapidly developed as a person or as a professional, I notice that periods of growth followed a decision to leave a comfortable, current state behind and instead do something new. This new thing often felt challenging, uncomfortable, and scary. I failed more often than when I knew what I was doing. But I think leaving your comfort zone is a requirement to grow. 
 
 I had to leave my comfort zone to grow when
