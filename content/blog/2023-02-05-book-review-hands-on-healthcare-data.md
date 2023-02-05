@@ -20,12 +20,12 @@ published by O'Reilly in September 2022. What I particularly liked about the boo
 
 Performing scientific research, statistical analyses, data integration, or machine learning in a healthcare setting
 often means reusing data originally collected with another goal in mind, namely delivering healthcare.
-This makes working with and harmonizing healthcare data really tricky.
+This makes working with and harmonizing healthcare data difficult.
 
 For example, when working with International Classification of Diseases (ICD) codes, consider the following complexities:
 
-1. ICD release used, e.g. ICD-9 vs ICD-10
-2. release version updates applied
+1. ICD release used, e.g., ICD-9 vs ICD-10
+2. ICD release version updates applied
 3. local modifications by health agencies and governments applied 
 4. coding guidelines and their version used by healthcare staff and adherence to these guidelines
 
@@ -46,7 +46,7 @@ but check the plethora of services and code repositories listed in the book firs
 
 ## What could be better
 
-It felt like every chapter of the book came with a message similar to:
+It felt like every chapter of the book came with a message similar to
 
 > "Hey, graph databases could help here and make working with healthcare data so much easier".
 
@@ -54,8 +54,8 @@ I agree with the author that modeling data as graphs adds flexibility and often 
 Nevertheless, I got a bit tired of this message after reading it time and time again and would have preferred a
 message like this to be presented in one place, maybe a standalone chapter. 
 
-In addition, the book chapters describing analytics and machine learning for healthcare are pretty vague and I would have preferred
-more concrete examples of what worked and what did not work in the past.
+In addition, book chapters describing analytics and machine learning for healthcare are pretty high-level and I would have preferred
+more concrete examples of past successes and failures.
 
 # Verdict
 
@@ -63,4 +63,4 @@ more concrete examples of what worked and what did not work in the past.
 working with healthcare data as well as the core challenges to be aware of. I think this is the first book trying to address this area.
 
 🤔 - the book **could** be useful to anyone else wanting to learn about healthcare data and what to do with it.
-But a more general audience will find themselves skipping many of the more technical sections of the book.
+But I think a more general audience will find themselves skipping many of the more technical sections of the book.
