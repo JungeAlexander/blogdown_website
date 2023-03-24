@@ -19,4 +19,5 @@ draft: true
 - specter paper and illustrate
 - embedding + triplet loss
 - deployed to streamlit cloud - scale?
-- specter 2?
+- next steps
+- specter 2? LLM interface to interact with recommendations.
