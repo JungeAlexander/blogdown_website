@@ -16,10 +16,17 @@ draft: false
 
 # TL;DR
 
-There are too many interesting research papers to read and I wanted to prototype an approach to recommend papers using my feedback
-and pretrained document embeddings.
-Check the live app [here](https://jungealexander-rr-apps2-api-n6v2v3.streamlit.app) or on [GitHub](https://github.com/JungeAlexander/rr).
-The video towards the end of the article shows the app in action, too.
+There are too many interesting research papers to read.
+This article describes an approach to recommend papers using user feedback
+and pretrained paper embeddings.
+Check the live app [here](https://jungealexander-rr-apps2-api-n6v2v3.streamlit.app) or see the source code on [GitHub](https://github.com/JungeAlexander/rr).
+
+The app in action looks like this (no sound, just a video) - read on if you want to know how it works:
+
+<video width=100% controls>
+    <source src="/posts/2023-03-26/capture.mp4" type="video/mp4">
+    Your browser does not support the video tag.  
+</video>
 
 # Why?
 
@@ -77,12 +84,7 @@ The interactive 2D visualization of the papers is created using [bokeh](http://b
 
 ## 4. Repeat until satisfied with the recommendations or come back another time
 
-Putting it all together, the recommendation flow looks like this (no sound, just a video):
-
-<video width=100% controls>
-    <source src="/posts/2023-03-26/capture.mp4" type="video/mp4">
-    Your browser does not support the video tag.  
-</video>
+Go to Step 1 or 2.
 
 # The math behind finding recommendations based on liked and disliked papers
 
