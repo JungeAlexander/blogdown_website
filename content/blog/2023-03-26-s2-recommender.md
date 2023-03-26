@@ -16,7 +16,8 @@ draft: false
 
 # TL;DR
 
-There are too many papers to read and I wanted to prototype an approach to finding interesting research papers.
+There are too many interesting research papers to read and I wanted to prototype an approach to recommend papers using my feedback
+and pretrained document embeddings.
 Check the live app [here](https://jungealexander-rr-apps2-api-n6v2v3.streamlit.app) or on [GitHub](https://github.com/JungeAlexander/rr).
 The video towards the end of the article shows the app in action, too.
 
@@ -96,7 +97,7 @@ using a triplet loss. See the illustration here from the SPECTER paper:
 
 I then sort papers in increasing order by score $\mathcal{S}$ (loosely inspired by triplet loss):
   
-$$\mathcal{S}(x, L, D) = \\text{min}_{l \in L} \  d(x, l) \ - \ \\text{min}_{d \in D} \ d(x, d)$$
+$\mathcal{S}(x, L, D) = \\text{min}_{l \in L} \  d(x, l) \ - \ \\text{min}_{d \in D} \ d(x, d)$
 
 where $x$ is the query paper, $L$ the set of liked papers, $D$ the set of disliked papers, $d$ is the cosine distance between two embeddings. I.e. we look for papers that are similar to the liked papers but dissimilar to the disliked papers.
 The paper with the lowest $\mathcal{S}$ gets recommended first.
