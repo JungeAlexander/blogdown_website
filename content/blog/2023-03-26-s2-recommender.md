@@ -11,11 +11,16 @@ tags:
   - machine learning
   - streamlit
 draft: false
-header-includes:
-  - <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  - <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 ---
+
+# TL;DR
+
+There are too many papers to read and I wanted to prototype an approach to finding interesting research papers.
+Check the live app [here](https://jungealexander-rr-apps2-api-n6v2v3.streamlit.app) or on [GitHub](https://github.com/JungeAlexander/rr).
+The video towards the end of the article shows the app in action, too.
+
+# Why?
 
 There are simply **too many** interesting research papers out there to read and more are getting published every day.
 Even sort of keeping up with the literature by skimming titles and abstracts of relevant work
@@ -109,6 +114,7 @@ push to the `main` branch, the app is automatically redeployed.
 
 There are many improvements to be explored ranging from switching to [SPECTER 2](https://huggingface.co/allenai/specter2)
 embeddings to adding a chat-like interface to interact with the surfaced papers' contents or testing better recommendation ranking heuristics.
+
 From a backend perspective, I would love to add user authentication, multiple feeds per user,
 and a proper backend database to store recommendations across sessions.
 But this certainly goes beyond this early prototype for now.

@@ -44,6 +44,7 @@ mastodon               = "https://fosstodon.org/@jungealexander"  #"//fosstodon.
 highlightjs            = true
 # highlightjslanguages = ["go"]                        # additional languages not included in the "common" set
 # highlightjsStyle     = "darcula"
+uselatex               = true
 
 piwik                  = false                         # If true, Piwik integration is enabled
 # piwik_url            = "//www.example.com/piwik/"    # URL to your Piwik installation. Must End with a slash
