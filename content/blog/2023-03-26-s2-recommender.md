@@ -97,7 +97,7 @@ using a triplet loss. See the illustration here from the SPECTER paper:
 
 ![](/posts/2023-03-26/specter-overview.png)
 
-I then sort papers in increasing order by score $\mathcal{S}$ (loosely inspired by triplet loss): $\mathcal{S}(x, L, D)$ = $\text{min}_{l \in L}$ $d(x, l)$ - $\text{min}_{d \in D}$  $d(x, d)$
+I then sort papers in increasing order by score $\mathcal{S}$ (loosely inspired by triplet loss): $\mathcal{S}(x, L, D)$ = $\text{min}\_{l \in L}$ $d(x, l)$ - $\text{min}\_{d \in D}$  $d(x, d)$
 
 where $x$ is the query paper, $L$ the set of liked papers, $D$ the set of disliked papers, $d$ is the cosine distance between two embeddings. I.e. we look for papers that are similar to the liked papers but dissimilar to the disliked papers.
 The paper with the lowest $\mathcal{S}$ gets recommended first.
