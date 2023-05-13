@@ -25,6 +25,14 @@ From time to time I also write about my research and general interests on my [bl
 - [SlideShare](https://www.slideshare.net/AlexanderJunge1)
 - [Wikipedia](https://en.wikipedia.org/wiki/User:AlexanderJunge)
 
+## Public appearances
+
+**Note:** I only started the list below in May 2023 so there is probably more content I contributed to out there. Let me know if you find any.
+
+### Podcasts
+
+- Life Science Talent Talks "S1E13: Getting out of your comfort zone" recorded on 24th March 2023. [Apple podcasts](https://podcasts.apple.com/us/podcast/life-science-talent-talks/id1669191567); [Spotify podcasts](https://open.spotify.com/show/5Ww4xvlOtEZqYrsPCJ5Cu5)
+
 ## Brief CV
 
 - *07/2022--present*: Head of Machine Learning at Corti ApS
