@@ -7,9 +7,13 @@ title = "About"
 
 Thank you for visiting my personal homepage!
 
-My name is Alexander Junge, I am currently Head of Machine Learning at [Corti](https://www.corti.ai) where
-we bring machine learning to support conversations between healthcare professionals and patients where it matters most.
-I live in Copenhagen, Denmark.
+My name is Alexander Junge, I am CTO and co-founder of [amass technologies](https://www.amass.tech) where
+we are building a scientific memory to fuel life sciences R&D.
+I live in Copenhagen, Denmark, with my family.
+
+Before that, I was Head of Machine Learning at [Corti](https://www.corti.ai), a HealthTech Series A scale-up
+bringing machine learning to support conversations between healthcare professionals and
+patients where it matters most.
 
 Before that, I worked as a Senior Data Scientist in pharmaceutical R&D at Novo Nordisk.
 In 2017, I obtained a PhD degree in RNA Bioinformatics and afterward I was a postdoctoral researcher in biomedical text mining. More information about me and my CV can be found below. You may furthermore be interested in my [projects](/projects) and [publications](https://scholar.google.com/citations?user=80t0eDYAAAAJ&hl=en) I worked on during my time as a PhD student and postdoctoral researcher.
@@ -36,7 +40,8 @@ From time to time I also write about my research and general interests on my [bl
 
 ## Brief CV
 
-- *07/2022--present*: Head of Machine Learning at Corti ApS
+- *08/2023--present*: CTO and Co-founder at amass technologies ApS
+- *07/2022--08/2023*: Head of Machine Learning at Corti ApS
 - *11/2021--06/2022*: Lead data scientist at Corti ApS
 - *02/2019--10/2021*: Senior data scientist in pharmaceutical R&D at Novo Nordisk A/S
 - *04/2017--01/2019*: Postdoctoral researcher in biomedical text mining at the [Novo Nordisk Foundation Center for Protein Research](http://www.cpr.ku.dk/), University of Copenhagen, Denmark. I am a member of the [Cellular Network Biology group](http://www.cpr.ku.dk/research/disease-systems-biology/jensen/) headed by Lars Juhl Jensen, PhD.
