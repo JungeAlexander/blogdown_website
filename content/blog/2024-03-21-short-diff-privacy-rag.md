@@ -1,7 +1,7 @@
 ---
 title: 'Short: Differential privacy in a RAG setting'
 author: 'Alexander Junge'
-date: '2024-03-20'
+date: '2024-03-21'
 slug: short-diff-privacy-rag
 categories:
   - short
