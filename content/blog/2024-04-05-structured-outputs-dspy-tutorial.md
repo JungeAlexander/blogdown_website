@@ -15,13 +15,12 @@ draft: false
 ---
 
 I am a big fan and active user of [instructor](https://jxnl.github.io/instructor/) to make interactions
-with inherently probabilistic LMs more structured and reliable.
-Without approaches like this, making LMs work reliably in certrain production settings would be a true nightmare.
+with inherently probabilistic LMs more structured and reliable in the form of their output.
+Without approaches like this, making LMs work reliably in certain production settings would be a true nightmare.
 
 This is a really cool [intro video](https://www.youtube.com/watch?v=tVw3CwrN5-8) by Connor Shorten (of Weaviate)
-to structured outputs in general and
-specifially using instructor and [DSPy](https://dspy-docs.vercel.app). 
-DSPy is another really cool project and idea that, simply put, makes working with LM-based systems feel again like
+to structured outputs in general and specifically using instructor and [DSPy](https://dspy-docs.vercel.app). 
+DSPy is another cool project and idea that, simply put, makes working with LM-based systems feel again like
 ML engineering and not like a game of tipping LMs to produce the right output or threatening to
 harm a kitten (aka prompt engineering).
 
