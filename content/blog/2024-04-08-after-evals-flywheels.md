@@ -28,7 +28,7 @@ A few ideas to get you started thinking about flywheels for your AI product:
 1. focus on gathering simple, explicit (thumbs up/down) user feedback or implicit engagement data (e.g. clicks, reads, watch time).
 2. make these mechanisms part of your core user experience.
 3. use feedback to systematically improve your AI models. This can be tricky, potentially requiring a lot of MLOps infrastructure to continually retrain models.
-4. ensure at all times that user data is handled responsibly and in compliance with privacy regulations. For example, you might not be able to train on data without explicit user consent (which you can ask for). The good thing is that not all flywheels require training on user data, e.g. using feature-based approaches (averaging across users), [privacy-preserving technologies](/blog/short-diff-privacy-rag), synthetic data resembling actual usage, or even federated learning.
+4. ensure at all times that user data is handled responsibly and in compliance with privacy regulations. For example, you might not be able to train on data without explicit user consent (which you can ask for). The good thing is that not all flywheels require training on data for unique users, e.g. using feature-based approaches (averaging across users), [privacy-preserving technologies](/blog/short-diff-privacy-rag), synthetic data resembling actual usage, or even federated learning.
 
 
 ## Further reading
