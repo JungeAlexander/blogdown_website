@@ -1,7 +1,7 @@
 ---
 title: 'After evals, flywheels'
 author: 'Alexander Junge'
-date: '2024-04-04'
+date: '2024-04-08'
 slug: after-evals-flywheels
 categories:
   - short
