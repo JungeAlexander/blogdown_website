@@ -16,36 +16,37 @@ draft: false
 ---
 
 I am a happy user of [pydantic](https://github.com/pydantic/pydantic) and [instructor](https://useinstructor.com),
-the latter being a well scoped tool with a well-defined surface area to use pydantic for structured outputs and validation for large language models.
-This week saw the release of [PydanticAI](https://ai.pydantic.dev) that, to me, looks like a nice abstraction to build agents on top of pydantic -
-I think this islargely because of my preexisting bias to use pydantic and instructor already.
+the latter being a well scoped tool with a well-defined surface area to use pydantic for structured outputs and validation for large language models, not much more.
+This week saw the release of [PydanticAI](https://ai.pydantic.dev) that, to me, looks like a nice abstraction to build agents on top of pydantic.
+I think this personal preference is largely because of my preexisting bias to use pydantic and instructor already.
 
 ## More agent frameworks than production-ready agents?
 
-However, I am pretty skeptical of the current state of agent frameworks and if and how they are used in production.
-To me, these frameworks feel like they are not quite hitting the right abstraction level.
-They make it *really* easy to build an agent for your social media demo
-but then you spend *days* just trying to figure out how it works behind the scences and how to do that one
+However, I remain pretty skeptical of the current state of agent frameworks.
+To me, these agent frameworks feel like they are not quite hitting the right abstraction level.
+They make it *really* easy to build an agent for your social media demo, sure,
+but then you spend *days* just trying to figure out how it works behind the scences and how to implement that one
 seemingly minor change in your prompt flow, put in some extra validation, etc.
-I think it is even fair to argue that there now exist more Python AI agent frameworks, than value-adding AI agents exist in production.
+I think it is even fair to argue that there now exist more Python AI agent frameworks than production-used, value-adding AI agents.
 
 So in the spirit of Hamel Husain's great blog post from February entitled ['F*ck You, Show Me The Prompt.'](https://hamel.dev/blog/posts/prompt/),
-let's take a look at what's really going on behind a simple prompt in PydanticAI.
+let's take a look at what's really going on behind a super simple agent run using PydanticAI.
 
 ## Show me the prompt, PydanticAI
 
-This example uses PydanticAI's [weather agent example](https://ai.pydantic.dev/examples/weather-agent/)
+This post, of course, uses PydanticAI's [weather agent example](https://ai.pydantic.dev/examples/weather-agent/)
 which I slightly modified (my code is [here](https://github.com/JungeAlexander/demo-pydantic-ai/blob/main/examples/weather_agent.py)).
 Since I wanted to see the raw JSON request sent to OpenAI (or my litellm proxy),
-I used [langfuse](https://langfuse.com) to get to the prompt.
-I also tried using Pydantic Co.'s new [logfire](https://pydantic.dev/logfire) (just to take a look)
+I used [langfuse](https://langfuse.com) to get to that JSON.
+I also tried using Pydantic Co.'s new [logfire](https://pydantic.dev/logfire) (just to try it out)
 but could not figure out a way to see the raw JSON request, so I stayed with langfuse.
 
-So here it what it looks like (comments are my annotation)
+So here it what it looks like (in-line comments are my annotation):
+
 ```json
 {
     "tools": [
-        { # 1) The first tool/function derives from the lat/long Python function
+        { # 1) The first tool/function derives from the location Python function
             "type": "function",
             "function": {
                 "name": "get_lat_lng",
@@ -116,7 +117,7 @@ So here it what it looks like (comments are my annotation)
             }
         }
     ],
-    "messages": [ # Nothing interesting here.
+    "messages": [ # Nothing interesting from here.
         {
             "role": "system",
             "content": "Be concise, reply with one sentence."
@@ -129,20 +130,26 @@ So here it what it looks like (comments are my annotation)
 }
 ```
 
-Unsuprisingly, Python functions are turned into tools/functions via JSON schemas.
-Where it gets interesting is that the response model is turned into a tool/function named `final_result`.
-So as a developer, you need to be aware that *your response model docstring and Field descriptions need to reflect that*.
+The key points are:
+
+1. Unsuprisingly, Python functions are turned into tools/functions via JSON schemas.
+2. The messages section is just the usual stuff you see in any chatbot interaction.
+3. Where it gets interesting is that the response model is turned into a tool/function named `final_result`.
+   As a developer, you need to be aware that *your response model docstring and Field descriptions need to reflect that*.
 
 ## So what?
 
-I think the most satifying piece of information is that PydanticAI is not doing any magic here.
-It is just using the same JSON schemas derived from Python functions or  pydantic models that you already know and love from instructor.
-Looking ahead, I am curious to see where PydanticAI is heading next.
-My hope is that the library will stay focused on the things it is already doing, rarther than being a tool trying to cover all the things people do with agents.
-For example, I like their focus on [testing and evals](https://ai.pydantic.dev/testing-evals/).
-On the other hand, I see some things that feel like they might be a step too far, e.g. [appending system prompts](https://ai.pydantic.dev/agents/#system-prompts) at runtime based on execution order - thi is just screaming for trouble.
+I think the most satifying piece of information is that PydanticAI is not doing any magic here - this is good.
+It is just using the same JSON schemas derived from Python functions or pydantic models that you already know and love.
 
-## Code
+Looking ahead, I am curious to see where PydanticAI is headed since it is such a new library.
+My hope is that PydanticAI will stay focused on the things it is already doing, rarther than trying to be a tool to cover all the things people do with agents.
+I like their focus on [testing and evals](https://ai.pydantic.dev/testing-evals/).
+On the other hand, I see some things that feel like they might be a step too far, e.g. [appending system prompts](https://ai.pydantic.dev/agents/#system-prompts) at runtime based on execution order - this just seems unnecessary is just screaming for trouble.
+
+## Appendix
+
+### Code
 
 If you want to play with the code, here it is:
 [https://github.com/JungeAlexander/demo-pydantic-ai](https://github.com/JungeAlexander/demo-pydantic-ai)
