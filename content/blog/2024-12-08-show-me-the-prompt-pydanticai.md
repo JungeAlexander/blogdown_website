@@ -157,9 +157,3 @@ If you want to play with the code, here it is:
 For the actual implementation of how response models are handled,
 go [here](https://github.com/pydantic/pydantic-ai/blob/13b9382b388bc717757b5597556f92fd6072ab4b/pydantic_ai_slim/pydantic_ai/agent.py#L129).
 Although since the library is still young this link will probably be outdated rather quickly.
-
-# TODO:
-
-- Blog post publish
-- Link to post from GitHub
-- LinkedIn message draft, X, Mastodon, Bluesky -> short, engineering heavy
