@@ -28,6 +28,7 @@ From time to time I also write about my research and general interests on my [bl
 
 - Life Science Talent Talks "S1E13: Getting out of your comfort zone" recorded on 24th March 2023. [Apple podcasts](https://podcasts.apple.com/us/podcast/life-science-talent-talks/id1669191567); [Spotify podcasts](https://open.spotify.com/show/5Ww4xvlOtEZqYrsPCJ5Cu5).
 - Evolution Exchange Denmark Podcast "Machine Learning - How to Get Started". [Apple podcasts](https://podcasts.apple.com/dk/podcast/evo-dk-76-machine-learning-how-to-get-started/id1655915259?i=1000617800295); [Spotify podcasts](https://open.spotify.com/episode/1YlZPh0QEubSz9tDGBZQlt?si=95dfb6a914f643f9&nd=1)
+- Data in Biotech Podcast "How Alex Junge from amass is Speeding Up Scientific Breakthroughs with AI" [Apple Podcasts](https://podcasts.apple.com/us/podcast/how-alex-junge-from-amass-is-speeding-up-scientific/id1708993594?i=1000694087720); [Spotify Podcasts](https://open.spotify.com/episode/1YjPFXxkHRHay4Ue5Bn06B?si=BBycEHxnRECz6NveKkSUNQ&nd=1&dlsi=c73d93db6c164d97); YouTube(https://www.youtube.com/watch?v=uwQIPLemSf8)
 
 ## Other places to find me
 
