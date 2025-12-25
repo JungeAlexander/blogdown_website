@@ -1,7 +1,4 @@
-@font-face {
-  font-family: 'Nexa Bold';
-  src: url('{{ .Site.BaseURL }}fonts/Nexa Bold.otf');
-}
+/* Raleway is loaded via Google Fonts / WebFont Loader (see head/footer partials). */
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -168,7 +165,7 @@ div.header .container .logo {
 div.header .name {
   padding-top: 20px;
   font-size: 28px;
-  font-family: 'Nexa Bold', 'Helvetica Neue', 'Arial', sans-serif;
+  font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;
   letter-spacing: -0.005rem;
   {{ if isset .Site.Params "titlestyle" }}
       {{ if in "capitalize uppercase lowercase none full-width" .Site.Params.titlestyle }}
